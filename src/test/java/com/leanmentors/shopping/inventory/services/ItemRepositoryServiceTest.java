@@ -3,6 +3,7 @@ package com.leanmentors.shopping.inventory.services;
 import com.leanmentors.shopping.inventory.entities.Item;
 import com.leanmentors.shopping.inventory.repositories.ItemRepository;
 import org.junit.Test;
+import org.springframework.context.annotation.Profile;
 
 import java.util.Optional;
 
