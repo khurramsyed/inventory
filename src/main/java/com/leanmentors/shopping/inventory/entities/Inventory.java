@@ -7,17 +7,14 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "inventory")
+@Table(name = "Inventory")
 public class Inventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long productId;
-
     private Long quantity;
 
-    @OneToOne(mappedBy = "inventory")
-    private Item item;
+    private String description;
 
 }

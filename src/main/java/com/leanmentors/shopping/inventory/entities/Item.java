@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name = "Item")
+@Table(name = "Items")
 public class Item {
 
     @Id
@@ -23,9 +23,8 @@ public class Item {
     @Column(nullable = false, unique = true)
     private String code;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "inventory_id")
-    private Inventory inventory;
+    @Column(nullable = false)
+    private Long inventory_id;
 
 
 }
