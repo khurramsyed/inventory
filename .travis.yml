@@ -4,4 +4,4 @@ jdk:
 # git strips the wrapper jar file so we have to force its download during the build
 install:
 - mvn -N io.takari:maven:wrapper
-- ./mvnw install -Dspring.profiles.active=dev -Dmaven.javadoc.skip=true -B -V
+- ./mvnw -Dspring.profiles.active=dev -Dmaven.javadoc.skip=true clean install -B -V
