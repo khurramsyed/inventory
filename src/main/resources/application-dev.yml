@@ -7,38 +7,22 @@ logging:
    leanmentors: debug
 
 
-
 spring:
+ h2:
+  console:
+   enabled: true
+   path: /h2
+# Datasource
  datasource:
-  driver-class-name: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/catalog?useSSL=false
-  username: root
-  password: admin
-  initialization-mode: always
+  url: jdbc:h2:file:~/test
+  username: sa
+  password:
+  driver-class-name: org.h2.Driver
+hibernate:
+ dialect: org.hibernate.dialect.H2Dialect
  jpa:
   hibernate.ddl-auto: update
   show-sql: true
-
-hibernate:
- dialect: org.hibernate.dialect.MySQLDialect
-
-
-#spring:
-# h2:
-#  console:
-#   enabled: true
-#   path: /h2
-## Datasource
-# datasource:
-#  url: jdbc:h2:file:~/test
-#  username: sa
-#  password:
-#  driver-class-name: org.h2.Driver
-#hibernate:
-# dialect: org.hibernate.dialect.H2Dialect
-# jpa:
-#  hibernate.ddl-auto: update
-#  show-sql: true
 
 #expose all the Actuator endpoints
 management:

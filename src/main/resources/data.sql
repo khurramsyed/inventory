@@ -1,3 +1,6 @@
+delete from Inventory;
+delete from Items;
+
 insert into Inventory(id, quantity ,description) VALUES
 (1, 100, 'Inventory - Java 10 in Action'),
 (2, 20, 'Inventory - Spring Boot and microservices'),
