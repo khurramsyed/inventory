@@ -2,6 +2,9 @@ language: java
 jdk:
 - oraclejdk8
 # git strips the wrapper jar file so we have to force its download during the build
+
+env:
+  - spring_profiles_active=dev
 install:
 - mvn -N io.takari:maven:wrapper
-- ./mvnw -Dspring.profiles.active=dev -Dmaven.javadoc.skip=true clean install -B -V
+- ./mvnw -Dmaven.javadoc.skip=true clean install -B -V
