@@ -8,3 +8,11 @@ env:
 install:
 - mvn -N io.takari:maven:wrapper
 - ./mvnw -Dmaven.javadoc.skip=true clean install -B -V
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
