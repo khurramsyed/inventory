@@ -26,13 +26,13 @@ public class ItemController {
     private ItemService itemService;
 
     @GetMapping("")
-    public List<Item> getItems(){
-        return itemService.findAll();
+    public List<Item> fetchAllItems(){
+        return itemService.fetchAll();
     }
 
     @GetMapping("/{code}")
-    public ResponseEntity<Item> getItem(@PathVariable String code){
-        Optional<Item> item = itemService.findByCode(code);
+    public ResponseEntity<Item> fetchItemByCode(@PathVariable String code){
+        Optional<Item> item = itemService.fetchByCode(code);
         if(item.isPresent()){
             return new ResponseEntity<Item>(item.get(), HttpStatus.OK);
         }else{

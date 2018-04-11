@@ -23,11 +23,11 @@ public class ItemService {
         this.itemRepository= repository;
     }
 
-    public Optional<Item> findByCode(String code){
+    public Optional<Item> fetchByCode(String code){
         return itemRepository.findByCode(code);
     }
 
-    public List<Item> findAll(){
+    public List<Item> fetchAll(){
         return itemRepository.findAll();
     }
 
