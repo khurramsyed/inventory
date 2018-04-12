@@ -10,7 +10,7 @@ install:
 - ./mvnw -Dmaven.javadoc.skip=true clean install -B -V
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t 3a013253-cb4a-4714-aa7e-91e5c0dbab9b
 
 cache:
   directories:
